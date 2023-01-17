@@ -5,6 +5,7 @@ class Solution(object):
         :type magazine: str
         :rtype: bool
         """
+        result = set(ransomNote).intersection(magazine)
         return True
 
 
