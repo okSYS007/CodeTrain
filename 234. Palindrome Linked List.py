@@ -9,12 +9,22 @@ class Solution(object):
         :type head: ListNode
         :rtype: bool
         """
-        return True
+        def check(head):
+            if (head == None):
+                return True
+            res = check(head.next) and (self.temp.val == head.val)
+            self.temp = self.temp.next
+            return res;
+        
+        self.temp = head
+        return check(head);
+       
 
+#ListNode
 
-test1 = [1,2]
-test2 = [1,2,2,1]
+# test1 = [1,2]
+# test2 = [1,2,2,1]
 
-MySolution = Solution()
-print(MySolution.isPalindrome(test1))
-print(MySolution.isPalindrome(test2))
+# MySolution = Solution()
+# print(MySolution.isPalindrome(test1))
+# print(MySolution.isPalindrome(test2))
