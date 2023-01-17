@@ -5,8 +5,11 @@ class Solution(object):
         :type magazine: str
         :rtype: bool
         """
-        result = set(ransomNote).intersection(magazine)
-        return True
+        from collections import Counter
+        st1, st2 = Counter(ransomNote), Counter(magazine)
+        if st1 & st2 == st1:
+            return True
+        return False
 
 
 ransomNote1 = "a" 
