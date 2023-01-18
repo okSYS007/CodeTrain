@@ -9,12 +9,17 @@ class Solution(object):
         :type head: ListNode
         :rtype: ListNode
         """
+        slow = fast = head
+        while fast and fast.next:
+            slow = slow.next
+            fast = fast.next.next
+        return slow
 
-        return True
+#List node
 
-head1 = [1,2,3,4,5]
-head2 = [1,2,3,4,5,6]
+# head1 = [1,2,3,4,5]
+# head2 = [1,2,3,4,5,6]
 
-MySolution = Solution()
-print(MySolution.middleNode(head1))
-print(MySolution.middleNode(head2))
+# MySolution = Solution()
+# print(MySolution.middleNode(head1))
+# print(MySolution.middleNode(head2))
