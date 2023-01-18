@@ -5,8 +5,10 @@ class Solution(object):
         :type k: int
         :rtype: List[int]
         """
-
-        return 1
+        m = len(mat)
+        rows = sorted(range(m), key=lambda i: (mat[i], i))
+        del rows[k:]
+        return rows
 
 
 mat1 =  [[1,1,0,0,0], #[2,0,3]
