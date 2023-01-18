@@ -9,7 +9,21 @@ class Solution(object):
         :type n: int
         :rtype: List[str]
         """
-        return True
+        #FizzBuzz
+        rez = []
+
+        for x in range(n):
+            num = x+1
+            if num % 3 == 0 and num % 5 == 0:
+                rez.append("FizzBuzz")
+            elif num % 3 == 0:
+                rez.append("Fizz")
+            elif num % 5 == 0:
+                rez.append("Buzz")
+            else:
+                rez.append(str(num))
+
+        return rez
 
 
 test1 = 3 #["1","2","Fizz"]
