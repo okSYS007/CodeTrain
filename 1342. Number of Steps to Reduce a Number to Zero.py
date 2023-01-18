@@ -6,9 +6,11 @@ class Solution(object):
         """
         return True
 
-# head1 = [1,2,3,4,5]
-# head2 = [1,2,3,4,5,6]
+num1 = 14
+num2 = 8
+num3 = 123
 
-# MySolution = Solution()
-# print(MySolution.middleNode(head1))
-# print(MySolution.middleNode(head2))
+MySolution = Solution()
+print(MySolution.numberOfSteps(num1))
+print(MySolution.numberOfSteps(num2))
+print(MySolution.numberOfSteps(num3))
