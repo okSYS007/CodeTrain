@@ -5,6 +5,7 @@ class Solution(object):
         :type target: int
         :rtype: List[int]
         """
+        
 
         return True
 
@@ -17,6 +18,6 @@ target3 = 6
 
 
 MySolution = Solution()
-print(MySolution.twoSum(nums1, target1))#[0,1]
+print(MySolution.twoSum(nums1, target1))#[0,1] Because nums[0] + nums[1] == 9, we return [0, 1].
 print(MySolution.twoSum(nums2, target2))#[1,2]
 print(MySolution.twoSum(nums3, target3))#[0,1]
