@@ -4,7 +4,17 @@ class Solution(object):
         :type accounts: List[List[int]]
         :rtype: int
         """
-        return 1
+        sum = 0
+        max = 0
+        
+        for x in accounts:
+            for y in x:
+                sum += y
+            if sum > max:
+                max = sum
+            sum = 0
+
+        return max
 
 
 accounts1 = [[1,2,3],[3,2,1]] #6
