@@ -5,9 +5,14 @@ class Solution(object):
         :type target: int
         :rtype: List[int]
         """
-        
-
-        return True
+        firstNum = nums[0]
+        index = 0
+        for x in nums[1:]:
+            if firstNum + x == target:
+                return [index, index+1]
+            else:
+                firstNum = x
+            index += 1
 
 nums1 = [2,7,11,15]
 target1 = 9 
