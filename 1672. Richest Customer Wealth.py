@@ -4,23 +4,7 @@ class Solution(object):
         :type accounts: List[List[int]]
         :rtype: int
         """ 
-        maxNum = 0
-        sumNum = 0
-        def getSum(piece):
-            if len(piece)==0:
-                return 0
-            else:
-                return piece[0] + getSum(piece[1:]) 
-        
-        for x in accounts:
-            sumNum = getSum(x)
-            if sumNum > maxNum:
-                maxNum = sumNum
-        
-        return maxNum
-
-
-
+        return max(sum(acc) for acc in accounts)
 
 accounts1 = [[1,2,3],[3,2,1]] #6
 # 1st customer has wealth = 1 + 2 + 3 = 6
