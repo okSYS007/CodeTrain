@@ -15,7 +15,7 @@ class Solution(object):
 
 
 strs1 = ["flower","flow","flight"]
-strs2 = ["dog","racecar","car"]
+strs2 = ["dog","docecar","dar"]
 strs3 = ["flower","flow","floght"]
 
 
