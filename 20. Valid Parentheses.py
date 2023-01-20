@@ -4,7 +4,21 @@ class Solution(object):
         :type s: str
         :rtype: bool
         """
-        return True
+        charSym = {
+            "(":")",
+            "{": "}",
+            "[":"]"
+        }
+        rez = True
+        for sym in s:
+            if sym in charSym.values():
+                continue
+            if charSym[sym] in s:
+                rez = True
+            else:
+                rez = False
+            
+        return rez
 
 
 test1 = "()"
