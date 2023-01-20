@@ -4,29 +4,32 @@ class Solution(object):
         :type s: str
         :rtype: bool
         """
+
         charSym = {
-            "(":")",
-            "{": "}",
-            "[":"]"
+            ')':'(',
+            '}':'{',
+            ']':'['
         }
-        rez = True
+        lfind = []
         for sym in s:
             if sym in charSym.values():
-                continue
-            if charSym[sym] in s:
-                rez = True
+                lfind.append(sym)
+            elif lfind and charSym[sym] == lfind[-1]:
+                lfind.pop()
             else:
-                rez = False
+                return False
             
-        return rez
+        return lfind == []
 
 
 test1 = "()"
 test2 = "()[]{}"
 test3 = "(]"
+test4 = "([)]"
 
 
 MySolution = Solution()
 print(MySolution.isValid(test1))# True
 print(MySolution.isValid(test2))# True
 print(MySolution.isValid(test3))# False
+print(MySolution.isValid(test4))# False
