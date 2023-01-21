@@ -4,7 +4,15 @@ class Solution(object):
         :type digits: List[int]
         :rtype: List[int]
         """
-        return 2
+        rez = []
+        sum = ""
+        for num in digits:
+           sum += "".join(str(num))
+
+        sum = int(sum)+1
+        for num in str(sum):
+            rez.append(int(num))
+        return rez
 
 test1 = [1,2,3]
 test2 = [4,3,2,1]
