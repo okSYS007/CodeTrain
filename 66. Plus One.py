@@ -4,19 +4,17 @@ class Solution(object):
         :type digits: List[int]
         :rtype: List[int]
         """
-        rez = []
-        sum = ""
-        for num in digits:
-           sum += "".join(str(num))
-
-        sum = int(sum)+1
-        for num in str(sum):
-            rez.append(int(num))
-        return rez
+        last = digits[-1]
+        if last == 9:
+            if len(digits) == 1:
+                return [1,0]
+            return self.plusOne(digits[:-1]) + [0]
+        digits[-1] += 1
+        return digits
 
 test1 = [1,2,3]
 test2 = [4,3,2,1]
-test3 = [9]
+test3 = [49]
 
 MySolution = Solution()
 print(MySolution.plusOne(test1))# [1,2,4]
