@@ -4,7 +4,25 @@ class Solution(object):
         :type nums: List[int]
         :rtype: int
         """
-        return 1
+
+        hashNums = {}
+        rez = []
+        numsToAdd = 0
+        for num in nums:
+            if num in hashNums:
+                numsToAdd += 1
+                continue
+            else:
+                hashNums.update({num:num})
+            
+            rez.append(num)
+                
+        rezForReturn = len(rez)
+
+        for _ in range(numsToAdd):
+            rez.append("_")
+        
+        return rezForReturn
 
 
 test1 = [1,1,2]
