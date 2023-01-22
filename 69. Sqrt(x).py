@@ -4,7 +4,7 @@ class Solution(object):
         :type x: int
         :rtype: int
         """
-        return 1
+        return int(x ** 0.5)
 
 test1 = 4
 test2 = 8
