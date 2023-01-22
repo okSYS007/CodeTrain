@@ -4,7 +4,12 @@ class Solution(object):
         :type n: int
         :rtype: int
         """
-        return 1
+        if n == 1:
+            return 1
+        d = [1, 2]
+        for i in range(2, n):
+            d.append(d[i-1] + d[i-2])
+        return d[-1]
 
 test1 = 2
 test2 = 3
