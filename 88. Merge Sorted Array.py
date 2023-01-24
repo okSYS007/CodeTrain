@@ -26,7 +26,7 @@ m = 3
 nums2 = [2,5,6]
 n = 3
 
-print(MySolution.merge(nums1, m, nums2, n))# [1,2,3,0,0,0]
+print(MySolution.merge(nums1, m, nums2, n))# [1,2,2,3,5,6]
 #####
 
 nums1 = [0]
@@ -35,8 +35,6 @@ nums2 = [1]
 n = 1
 
 print(MySolution.merge(nums1, m, nums2, n))# [0]
-
-
 
 nums1 = [1,2,3,0,0,0]
 m = 3
