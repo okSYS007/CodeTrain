@@ -11,22 +11,31 @@ class Solution(object):
         :rtype: List[int]
         """
 
-        return 1
+        ll=[]
+        def tr(root):
+            if root==None:
+                return 
+            
+            tr(root.left)
+            ll.append(root.val)
+            tr(root.right)
+            return ll
+        return tr(root)
 
 MySolution = Solution()
 
 
-root = [1,None,2,3]
+# root = [1,None,2,3]
 
-print(MySolution.inorderTraversal(root))# [1,3,2]
-#########################################
+# print(MySolution.inorderTraversal(root))# [1,3,2]
+# #########################################
 
-root = []
+# root = []
 
-print(MySolution.inorderTraversal(root))# []
-#########################################
+# print(MySolution.inorderTraversal(root))# []
+# #########################################
 
-root = [1]
+# root = [1]
 
-print(MySolution.inorderTraversal(root))# [1]
-#########################################
+# print(MySolution.inorderTraversal(root))# [1]
+# #########################################
