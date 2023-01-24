@@ -7,9 +7,36 @@ class Solution(object):
         :type n: int
         :rtype: None Do not return anything, modify nums1 in-place instead.
         """
-        return 1
+
+        rez = []
+        for index1 in range(m):
+            rez.append(nums1[index1]) 
+
+        for index2 in range(n):
+            rez.append(nums2[index2]) 
+
+        rez.sort()
+        nums1 = rez
+        return nums1
 
 MySolution = Solution()
+
+nums1 = [1,2,3,0,0,0]
+m = 3
+nums2 = [2,5,6]
+n = 3
+
+print(MySolution.merge(nums1, m, nums2, n))# [1,2,3,0,0,0]
+#####
+
+nums1 = [0]
+m = 0
+nums2 = [1]
+n = 1
+
+print(MySolution.merge(nums1, m, nums2, n))# [0]
+
+
 
 nums1 = [1,2,3,0,0,0]
 m = 3
