@@ -8,7 +8,6 @@ class Solution(object):
             "firstRow": 1,
             "secRowLeft": 1, "secRowRight" : 1,
             "thirdRowLeft": 1, "thirdRowCenter": 0, "thirdRowRight": 1,
-            "thirdRowLeft": 1, "thirdRowCenter": 0, "thirdRowRight": 1,
             "fourthRowLeft": 1, "fourthRowCenterLeft": 0, "fourthRowCenterRight": 0, "fourthRowRight": 1,
             "fifthRowLeft": 1, "fifthRowCenterLeft": 0, "fifthRowCenter": 0, "fifthRowCenterRight": 0, "fifthRowRight": 1,
             }
