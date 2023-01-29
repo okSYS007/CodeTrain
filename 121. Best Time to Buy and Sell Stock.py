@@ -4,17 +4,14 @@ class Solution(object):
         :type prices: List[int]
         :rtype: int
         """
-        #find min value + index
-        minPrice = prices[0]
-        maxPrice = 0
-        for price in prices[1:]:
-            if price < minPrice:
-                minPrice = price
-            elif price > maxPrice:
-                maxPrice = price
-
-        #find max value from min value +index
-        return maxPrice - minPrice if maxPrice > 0 else 0
+        if len(prices) == 0: return 0
+        else:
+            profit = 0
+            minBuy = prices[0]
+            for i in range(len(prices)):
+                profit = max(prices[i] - minBuy, profit)
+                minBuy = min(minBuy, prices[i])
+            return profit
 
 MySolution = Solution()
 
@@ -28,7 +25,7 @@ prices = [7,6,4,3,1]
 print(MySolution.maxProfit(prices))# 0
 # #########################################
 
-# root = [1]
+prices = [2,4,1]
 
-# print(MySolution.inorderTraversal(root))# [1]
+print(MySolution.maxProfit(prices))# 2
 # #########################################
