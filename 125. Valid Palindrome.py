@@ -1,10 +1,16 @@
 class Solution(object):
+
     def isPalindrome(self, s):
+        import re
         """
         :type s: str
         :rtype: bool
         """
-        return True
+        myStr = re.sub(":|,|\s", "", s).lower()
+        if myStr == myStr[::-1]:
+            return True
+        else:
+            return False
 
 
 MySolution = Solution()
