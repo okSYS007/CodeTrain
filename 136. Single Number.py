@@ -4,8 +4,18 @@ class Solution(object):
         :type nums: List[int]
         :rtype: int
         """
-        return 1
+        hashMap = {}
+        rezNum = 0
+        for num in nums:
+            if num not in hashMap:
+                hashMap.update({num:1})
+            else:
+                val = hashMap[num]
+                hashMap.update({num:val+1})
 
+        for key, value in hashMap.items():
+            if value == 1:
+                return key
 
 MySolution = Solution()
 
