@@ -4,18 +4,14 @@ class Solution(object):
         :type nums: List[int]
         :rtype: int
         """
-        hashMap = {}
-        rezNum = 0
-        for num in nums:
-            if num not in hashMap:
-                hashMap.update({num:1})
-            else:
-                val = hashMap[num]
-                hashMap.update({num:val+1})
-
-        for key, value in hashMap.items():
-            if value == 1:
-                return key
+        set1=set(nums)
+        nums1=list(set1)
+        nums2=nums1
+        nums1.extend(nums2)
+        for i in nums:
+            nums1.remove(i)
+        
+        return nums1[0]
 
 MySolution = Solution()
 
@@ -24,7 +20,7 @@ nums = [2,2,1]
 print(MySolution.singleNumber(nums))# 1
 # #########################################
 
-nums = [4,1,2,1,2]
+nums = [4,1,2,1,1,2]
 
 print(MySolution.singleNumber(nums))# 4
 # #########################################
