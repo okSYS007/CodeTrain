@@ -1,31 +1,31 @@
 class Solution(object):
 
     def isPalindrome(self, s):
-        import re
         """
         :type s: str
         :rtype: bool
         """
-        myStr = re.sub(":|,|\s", "", s).lower()
-        if myStr == myStr[::-1]:
-            return True
-        else:
-            return False
+        filter = ''.join([i.lower() for i in s if i.isalnum()])
+        return filter == filter[::-1]
 
 
 MySolution = Solution()
 
 s = "A man, a plan, a canal: Panama"
 
-print(MySolution.isPalindrome(s))# 5 "amanaplanacanalpanama" is a palindrome.
+print(MySolution.isPalindrome(s))# true
 # #########################################
 
 s = "race a car"
 
-print(MySolution.isPalindrome(s))# "raceacar" is not a palindrome.
+print(MySolution.isPalindrome(s))# false
 # #########################################
 
-s = " "
+s = "A man, a plan, a canal -- Panama"
 
-print(MySolution.isPalindrome(s))# s is an empty string "" after removing non-alphanumeric characters.
+print(MySolution.isPalindrome(s))# true
+# #########################################
+
+s = "Marge, let's \"[went].\" I await {news} telegram."
+print(MySolution.isPalindrome(s))# true
 # #########################################
