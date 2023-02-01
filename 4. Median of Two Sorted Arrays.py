@@ -5,7 +5,17 @@ class Solution(object):
         :type nums2: List[int]
         :rtype: float
         """
-        return 1.5
+        rezNum = []
+
+        for num in nums1:
+            rezNum.append(num)
+        
+        for num in nums2:
+            rezNum.append(num)
+
+        x = sum(rezNum) / len(rezNum)
+
+        return x
     
 
 MySolution = Solution()
