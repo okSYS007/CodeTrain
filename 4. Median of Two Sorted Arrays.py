@@ -7,12 +7,7 @@ class Solution(object):
         """
         num = sorted(nums1+nums2)
         l = len(num)
-        return num[int(l/2)] if l % 2 != 0 else (num[int(l/2)] + num[int((l/2))-1]) / 2
-        # if l%2!=0:
-        #     return num[int(l/2)]
-        # else:
-        #     return (num[int(l/2)] + num[int((l/2))-1])/2
-        
+        return num[int(l/2)] if l % 2 != 0 else (num[int(l/2)] + num[int((l/2))-1]) / 2        
 
 
 MySolution = Solution()
