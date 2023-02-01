@@ -5,13 +5,14 @@ class Solution(object):
         :type nums2: List[int]
         :rtype: float
         """
-        rezNum = []
-
-        rezNum = nums1 + nums2
-        rezNum.sort()
-        mid = len(rezNum) // 2
-
-        return float(rezNum[mid]) if len(rezNum) == 1 or (mid % 2 != 0 and mid % 2 != 1) else (rezNum[:mid][len(rezNum[:mid])-1] + rezNum[mid::][-len(rezNum[:mid])]) / 2
+        num = sorted(nums1+nums2)
+        l = len(num)
+        return num[int(l/2)] if l % 2 != 0 else (num[int(l/2)] + num[int((l/2))-1]) / 2
+        # if l%2!=0:
+        #     return num[int(l/2)]
+        # else:
+        #     return (num[int(l/2)] + num[int((l/2))-1])/2
+        
 
 
 MySolution = Solution()
