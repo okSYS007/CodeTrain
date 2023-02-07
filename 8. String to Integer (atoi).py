@@ -35,7 +35,7 @@ x = "   -42"
 print(MySolution.myAtoi(x))# -42
 # #########################################
 
-x = "4193 with words"
+x = "with words 4193"
 
 print(MySolution.myAtoi(x))# 4193
 # # #########################################
