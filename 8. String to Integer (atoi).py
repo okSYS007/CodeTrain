@@ -25,6 +25,7 @@ class Solution(object):
 MySolution = Solution()
 
 x = "42"
+test = '24'
 
 print(MySolution.myAtoi(x))# 42
 # #########################################
