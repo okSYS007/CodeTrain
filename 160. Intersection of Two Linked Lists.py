@@ -27,3 +27,6 @@ print(MySolution.getIntersectionNode(nums1))#[0,1] Because nums[0] + nums[1] == 
 print(MySolution.getIntersectionNode(nums2))#[1,2]
 print(MySolution.getIntersectionNode(nums3))#[0,1]
 print(MySolution.getIntersectionNode(nums4))#[0,2]
+
+
+
